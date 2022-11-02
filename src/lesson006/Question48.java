@@ -3,6 +3,7 @@ package lesson006;
 public class Question48 {
 
 	public static void main(String[] args) {
+	
 
 		String[][] matris1 = { { "Bilge", "Advanced" }, { "Postgre", "Data" } };
 
