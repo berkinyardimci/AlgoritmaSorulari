@@ -25,5 +25,9 @@ public class ProductManager {
 	//ürün ismini güncelle methodu
 	//Apple --> applem2
 	
+	public Product urunuGuncelle(Product product, String yeniIsım) {
+		 product.setName(yeniIsım);
+		 return product;
+	}
 	
 }

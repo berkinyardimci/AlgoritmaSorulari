@@ -47,6 +47,12 @@ public class Main {
 		manager.sepeteEkle(product2);
 		
 		
+		System.out.println("önceki ismi " + product1.getName());
+		
+		Product yeniIsım =manager.urunuGuncelle(product1, "HP");
+		
+		System.out.println("değişen isim " + yeniIsım);
+		
 		
 		//ProductManager.bilgilerGoster(product2);
 		//ProductManager.veriTabaninaKaydet(product2);

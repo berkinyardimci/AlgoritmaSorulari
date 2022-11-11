@@ -5,6 +5,7 @@ public class Product {
 	//Attribute, property leri, field
 	//üye değişkenleri
 	//sınıf değişkenleri
+	
 	private String productId;
 
 	public String name;
@@ -12,6 +13,10 @@ public class Product {
 	private double unitPrice;
 
 	private int unitInStock;
+	
+	public Product() {
+		
+	}
 	
 	
 	public String getProductId() {

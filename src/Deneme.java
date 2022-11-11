@@ -32,7 +32,12 @@ public class Deneme {
 		int rastgeleSayi = (int) (Math.random() * sinif.length);
 		System.out.println("Şansı Kİşi--> " + sinif[rastgeleSayi]);
 		*/
-
+		
+		
+		User user = new User("ahmet","3049887644");
+		
+		user.name="mehmet";
+		
 	}
 
 }
