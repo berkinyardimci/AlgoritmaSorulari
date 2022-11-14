@@ -4,8 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Account account1 = new Account("11223344");
-		Account account2 = new Account("555555");
+		Account account1 = new Account();
 		
 		AccounManager accounManager = new AccounManager();
 		AdminManager adminManager = new AdminManager();
@@ -21,15 +20,26 @@ public class Main {
 		
 		UserManager userManager = new UserManager();
 		userManager.otomatikEmailOlustur(user1);
-		userManager.userBilgileriGoster(user1);
+		userManager.bilgileriGoster(user1);
 		
 		userManager.krediBasvurusundaBulun(account1, 10000); //true
-		adminManager.krediBasvurusunuReddet(account1); // false
+		
+		adminManager.krediBasvurusunuOnayla(account1); // false
 		accounManager.hesapBilgileriniGoster(account1);
-		adminManager.krediBasvurusunuReddet(account1);
-		adminManager.krediBasvurusunuReddet(account1);
-		adminManager.krediBasvurusunuReddet(account1);
-		//15:58
+		
+		userManager.krediKartiBorcuOdeme(account1, 1000);
+		userManager.krediKartiBorcuOdeme(account1, 1000);
+		userManager.krediKartiBorcuOdeme(account1, 1000);
+		userManager.krediKartiBorcuOdeme(account1, 1000);
+		userManager.bilgileriGoster(user1);
+		
+		userManager.hesaptanKrediKartiBorcuOdeme(account1, 2000);
+		userManager.bilgileriGoster(user1);
+		
+		userManager.nakitAvansCek(account1);
+		userManager.bilgileriGoster(user1);
+		
+		
 		
 		//Atm uygulaması
 		
@@ -79,7 +89,26 @@ public class Main {
 		
 		//krediBasvursunuOnayla()
 		
+		//Account Nesne oluşturunca otomatik bize Id String olarak
 		
+		//Dışardan nakit kredi kartı borcunu öde methodu yazalım
+		//eğer user'ın çekmiş oldugu kredi yoksa ve ya kredi başvurusu reddedilmiş ise
+		// Bu işlemi geçkleştiremiyoruz diye output verelim
+		//çekilmiş kredi var ise parametre olarak girilen miktar kadar borç ödenmiş olsun 
+		//ve kredi kartı borcundan düşülsün
+		//daha sonra güncel kredi kartı borcunuz ... diye output versin
+		
+		
+		//Hesaptan borç ödeyelim
+		//hesap seçiyosunuz o hesaptan parayı alıp borca yatırıyo
+		
+		//her kart borcumuzu ödediğimiz
+		//Accountun kredi puani 10 puan artsın
+		
+		//Nakit avans çekicez
+		//nakit avans çekmemiz için bizim kredi Notumuzun 50 den fazla olması lazım
+		//eğer 50 den fazla ise hesaptaki paranın yarısı kadar nakit avans almış olcaz
+		//50 den az ize kredi notunuz yetersizdir kredi notmuzu bastırsın
 	}
 
 }
