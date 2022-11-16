@@ -32,7 +32,6 @@ public class Main {
 		takimlar[2] = takim3;
 		takimlar[3] = takim4;
 		
-		
 		takimManager.kasaDurumu(takim1);
 		takimManager.kasaDurumu(takim2);
 		takimManager.kasaDurumu(takim3);
