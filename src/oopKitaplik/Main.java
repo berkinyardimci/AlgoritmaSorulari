@@ -16,10 +16,22 @@ public class Main {
 		// bu method aldıgı parametreye göre arrayin boyutunu beliriliyor.
 		// ve Kutuphane nesnesi oluşturuken otomatik olarak kitaplıgımız oluşuyor.
 		// ----
-		// daha sonra mainde yine kitaplik oluştur diye bir static method yazıyoruz
+		// daha sonra SecimEkranında yine kitaplik oluştur diye bir static method yazıyoruz
 		// ve burda kullanıcıdan aldığımız int değere göre bir kutuphane nesnesi
-		// oluşturuyoruz, Kutuphane sınıfında yazdığımız methodu bu methodun içinde
-		// kullancaz
-
+		// oluşturuyoruz,
+		//kitaplık oluşturduktan sonra bir daha kitaplık oluşturulmasın
+		//eğer oluşturulmuş kitaplık varsa zaten kitaplık oluşturulmuş çıktısı versin
+		
+		// Kutuphane sınıfında kitapekle methodu yazalım
+		// parametre olarak yazar ismi ve kitap adı alsın
+		// ve arrayin içine bu değerleri atalım
+		//kullanıcıdan aldığımız yazar ve kitap ismini
+		//YAZAR,KİTAP formatında arreye atıyoruz
+		
+		
+		//Kutuphane içinde kitapIsmiAra diye method yazalım
+		//String kitap ismi alsın
+		//ve eğer arrayin için bu girilen değer varsa 
+		//bize o kitabın var olup olmadığını çıktı olarak versin
 	}
 }
