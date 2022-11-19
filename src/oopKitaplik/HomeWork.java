@@ -27,7 +27,7 @@ public class HomeWork {
 		
 		//MuzikKanalı sınıfı açalım
 		//Kanal sınıfından extend alıcak
-		//haberTuru (Borsa, Spor, Magazin Haberleri)
+		//MüzikTuru (Yerli, yabancı...)
 		
 		//Televizyon Sınıfı açalım
 		//marka, String boyut(15inch), ArrayList kanallar,
