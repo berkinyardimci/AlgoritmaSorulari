@@ -7,7 +7,7 @@ public class MapOrnek1 {
 	public static void main(String[] args) {
 		
 		
-		String kelime = "javaaaa";
+		String kelime = "selamm";
 		Map<Character, Integer> map = new HashMap<>();
 		
 		for (int i = 0; i < kelime.length(); i++) {

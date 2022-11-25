@@ -3,9 +3,22 @@ package streamUygulama;
 public class Main {
 
 	public static void main(String[] args) {
+	Sepet sepet = new Sepet();
+	
+	sepet.urunleriListele();
+	sepet.fiyatListesi();
+	sepet.sepetAdedi();
+	sepet.fiyati50denBuyukOlanlariListele();
+	sepet.fiyati50denBuyukOlanlarinOraniListele();
+	sepet.sepeteUrunEkle();
+	sepet.sepeteUrunEkle();
+	sepet.sepeteUrunEkle();
+	sepet.sepetAdedi();
+	System.out.println("********");
+	sepet.sepetiGoster();
+	
 	
 	}
-	
 	//EUrun diye bir enum sınıfı oluşturalım
 	//burda urun ve fiyatlarını tutucaz
 
