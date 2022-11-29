@@ -3,5 +3,5 @@ package futbolMaci;
 public interface IOyuncu {
 	
 	boolean pasver();
-	//golVurusu(int kurtaris);
+	boolean golVurusu(int kurtaris);
 }

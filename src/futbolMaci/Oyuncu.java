@@ -14,6 +14,15 @@ public abstract class Oyuncu implements IOyuncu{
 	private int kararlilik;
 	private int dogalForm;
 	private int sans;
+	private Takim takim;
+	
+	public Takim getTakim() {
+		return takim;
+	}
+
+	public void setTakim(Takim takim) {
+		this.takim = takim;
+	}
 
 	public Oyuncu(String ad, int formaNo) {
 		super();
@@ -30,7 +39,8 @@ public abstract class Oyuncu implements IOyuncu{
 	}
 	
 	public abstract int pasSkor();
-
+	public abstract int golSkor(int kurtaris);
+	
 	@Override
 	public boolean pasver() {
 		int skor = pasSkor();
@@ -40,6 +50,32 @@ public abstract class Oyuncu implements IOyuncu{
 			return false;
 		}
 	}
+	
+	@Override
+	public boolean golVurusu(int kurtaris) {
+		int skor = golSkor(kurtaris);
+		if(skor>68) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	//bitane abstract golskor(int kurtarıs değeri)
+	// kaleci için kurtarış skor methodunu yazalım
+	//kaleci sınıfının içinde (dökümanda gerekli bilgiler var)
+	//golSkor methodunu her bir oyunuc için override edelim.
+	
+	//IOyuncu interfacesine golvuruşumethodu yazalım parametre olarak int kurtarış alsın
+	//Oyuncu sınıfında override edelim
+	
+	//Mac sınıfının içinde golVuruşu diye bir method oluşturalım
+	//parametre olarak olarak Oyunuc oyuncu alsın
+	
+	//karşı takımın kalecisini almamız
+	//golvuruş methodunu çağıralım golVurusu(kalecini kurtarıs skorunu göndercez)
+	//parametre olarak oyuncu gönderdiğimiz için Oyuncu sınıfına field eklememiz laızm
+	
 	
 	@Override
 	public String toString() {

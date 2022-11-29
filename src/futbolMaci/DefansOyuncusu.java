@@ -57,6 +57,15 @@ public class DefansOyuncusu extends Oyuncu{
 				getDogalForm() * 0.1 + getPozisyonAlma()*0.1 + getSans()*0.2+ bonus);
 		return skor;
 	}
+
+
+	@Override
+	public int golSkor(int kurtaris) {
+		int bonus = (int) ((getRandom().nextInt(2, 5)) * (getDogalForm() * 0.075));
+		int golSkor = (int) (getYetenek() * 0.3 + getSut() * 0.2 + getKararlilik() * 0.1 + getSans() * 0.1 + kafa * 0.1
+				+ sicrama * 0.1 + getDogalForm() * 0.1) + bonus;
+		return golSkor - kurtaris;
+	}
 	
 	
 	

@@ -14,5 +14,7 @@ public class Test {
 		*/
 		Mac mac = new Mac();
 		mac.oyna(mac.takimList.get(0));
+		//mac.oyna(mac.takimList.get(0));
+		//mac.oyna(mac.takimList.get(0));
 	}
 }

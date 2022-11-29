@@ -12,12 +12,14 @@ public class Mac {
 		takimList = new ArrayList<>();
 		takimList.add(new Takim("Ev Sahibi"));
 		takimList.add(new Takim("Deplasman"));
+		
 	}
 	
 	
 	public void oyna(Takim takim) {
 		boolean kontrol = true;
 		int index = passKontrol(12);
+		
 		for (int i = 0; i < 3; i++) {
 			List<Oyuncu>  oyuncuListesi = takim.getOyuncuListesi();
 			if(oyuncuListesi.get(index).pasver()) {
@@ -32,13 +34,15 @@ public class Mac {
 						+ " nolu oyuncunun pası başarısız !!!! ");
 				kontrol = false;
 				takim = takimDegistir(takim);
-				i = -1;
+				i=-1;
 			}
 		}
-		if(kontrol) {
-			System.out.println("Gol vuruşu gerçekleşiyor");
-		}
+		//o anki indexteki oyuncuyu göndermek istiyorum
+		golVurusu(takim.getOyuncuListesi().get(index));
+		takim= takimDegistir(takim);
+		System.out.println(takim.toString()); // deplasmanı 
 	}
+	
 	
 	public int passKontrol(int index) {
 		
@@ -59,5 +63,15 @@ public class Mac {
 			teamIndex =1;
 		}
 		return takimList.get(teamIndex);
+	}
+	
+	public void golVurusu(Oyuncu oyuncu) {
+		Kaleci karsiTakiminKalecisi = takimDegistir(oyuncu.getTakim()).getKaleci();	
+		System.out.println("Kaleci topaUaznıyor ");
+		if(oyuncu.golVurusu(karsiTakiminKalecisi.kurtarisSkor())) {
+			System.out.println("Gol oldu");
+		}else {
+			System.out.println("Kaleci topu çıkardı");
+		}
 	}
 }

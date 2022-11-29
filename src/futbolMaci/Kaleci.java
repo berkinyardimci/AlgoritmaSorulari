@@ -32,5 +32,16 @@ public class Kaleci extends Oyuncu {
 		return 0;
 	}
 
+	@Override
+	public int golSkor(int kurtaris) {
+		return getRandom().nextInt(2, 71);
+	}
+
+	public int kurtarisSkor() {
+		int bonus = (int) (getRandom().nextInt(1, 6) * getDogalForm() * 0.025);
+		int skor = (int) (kurtaris * 0.2 + getKararlilik() * 0.1 + bonus);
+		return skor;
+	}
 	
+	//15:52
 }

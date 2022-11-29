@@ -73,10 +73,17 @@ public class OrtaSahaOyuncusu extends Oyuncu {
 
 	@Override
 	public int pasSkor() {
-		int bonus = getRandom().nextInt(1, 6);
+		int bonus = getRandom().nextInt(1, 8);
 		int skor = (int) (getPas() * 0.2 + getYetenek() * 0.2 + getOzelYetenk() * 0.2 + getDayaniklilik() * 0.1
 				+ getDogalForm() * 0.1 + getSans() * 0.1 + bonus);
 		return skor;
+	}
+
+
+	@Override
+	public int golSkor(int kurtaris) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
