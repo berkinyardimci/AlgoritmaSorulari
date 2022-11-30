@@ -19,9 +19,7 @@ public class FileIslemler {
 		 */
 		FileIslemler fileIslemler = new FileIslemler();
 		fileIslemler.menu();
-
 	}
-
 	public void menu() {
 		Scanner scanner = new Scanner(System.in);
 		int input = 0;
@@ -44,20 +42,37 @@ public class FileIslemler {
 				}
 				break;
 			case 2:
-				metinEkle(FileSabitler.file);
+				metinEkle(FileSabitler.file, metinGir());
 			default:
 				break;
 			case 3:
 				dosyaOku(FileSabitler.file);
+				break;
 			case 4:
+				harfDegistir(dosyaOku(FileSabitler.file));
+				break;
+			case 5:
 				try {
 					dosyaSil(FileSabitler.file);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+				break;
 			}
 		} while (input != 0);
 	}
+	
+	public void harfDegistir(String metin) {
+		Scanner scaneer = new Scanner(System.in);
+		System.out.println("Değiştirmek istediğiniz harf ");
+		char eskiHarf = scaneer.nextLine().charAt(0);
+		System.out.println("Hangi harf ile değiştirmek istersiniz ");
+		char yeniHarf = scaneer.nextLine().charAt(0);
+		
+		metin = metin.replace(eskiHarf, yeniHarf);
+		metinEkle(FileSabitler.file, metin);
+	}
+	
 	private void dosyaSil(File file) throws Exception {
 		// dosyanın olması lazım
 		if(file.exists()) {
@@ -68,10 +83,11 @@ public class FileIslemler {
 		}
 	}
 
-	public static void dosyaOku(File file)  {
+	public String dosyaOku(File file)  {
 		FileReader fr = null;
 		BufferedReader br = null;
 		Scanner sc = null;
+		String tumMetin = "";
 		try {
 			fr= new FileReader(file);
 			br = new BufferedReader(fr);
@@ -79,6 +95,8 @@ public class FileIslemler {
 			while(sc.hasNextLine()) {
 				String okunanSatir = sc.nextLine();
 				System.out.println(okunanSatir);
+				tumMetin += okunanSatir + "\n";
+				
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("dosya bulunamadı");
@@ -92,6 +110,7 @@ public class FileIslemler {
 				e.printStackTrace();
 			}
 		}
+		return tumMetin;
 	}
 
 	public static void dosyaYarat(File file) throws Exception {
@@ -109,7 +128,32 @@ public class FileIslemler {
 			System.out.println("dosyanız oluşturulmuştur");
 		}
 	}
-
+	
+	public String metinGir() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("eklemek istediğiniz metni girinizzzz");
+		String metin = scanner.nextLine();
+		return metin;
+	}
+	//14:40
+	
+	public static void metinEkle(File file, String string) {
+		BufferedWriter writer = null;
+		try {
+			writer = new BufferedWriter(new FileWriter(file,true));
+			writer.write(string + "\n");
+		}catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			if(writer!=null) {
+				try {
+					writer.close();
+				} catch (Exception e2) {
+					System.out.println("dosya kapatma hatası");
+				}
+			}
+		}
+	}
 	public static void metinEkle(File file) {
 		//Scanner ile kullanıcıdan alcaz
 		// kullanıcdan aldığımız veriyi dosyamıza yazcaz
@@ -136,4 +180,10 @@ public class FileIslemler {
 			}
 		}
 	}
+	
+	
+	//harf değiştir methodu-->  string bir parametre alcak dosyamızdaki metini alcak
+	//dosya oku methodunu string dönecek şekilde override edelim
+	//değiştirmek istediği harf --> s
+	//hangi harfle değiştirmek istiyosunuz --> l
 }
