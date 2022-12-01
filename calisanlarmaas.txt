@@ -1,0 +1,20 @@
+ali 3000
+aslı 5000
+ahmet 6000
+mehmet 7000
+
+zeynep 1000
+sila 1600
+ali 3000
+aslı 5000
+hakan 5600
+ahmet 6000
+mehmet 7000
+
+mehmet 7000
+ahmet 6000
+hakan 5600
+aslı 5000
+ali 3000
+sila 1600
+zeynep 1000

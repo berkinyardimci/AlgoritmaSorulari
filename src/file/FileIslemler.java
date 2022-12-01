@@ -31,8 +31,7 @@ public class FileIslemler {
 			System.out.println("4- Harf Değiştir");
 			System.out.println("5- Dosya silme");
 			System.out.println("lütfen işlem seçiniz");
-			input = scanner.nextInt();
-
+			input = Integer.parseInt(scanner.nextLine());
 			switch (input) {
 			case 1:
 				try {
@@ -42,7 +41,8 @@ public class FileIslemler {
 				}
 				break;
 			case 2:
-				metinEkle(FileSabitler.file, metinGir());
+				metinEkle(FileSabitler.file, metinGir(),true);
+				metinEkle(FileSabitler.file);
 			default:
 				break;
 			case 3:
@@ -68,9 +68,16 @@ public class FileIslemler {
 		char eskiHarf = scaneer.nextLine().charAt(0);
 		System.out.println("Hangi harf ile değiştirmek istersiniz ");
 		char yeniHarf = scaneer.nextLine().charAt(0);
-		
 		metin = metin.replace(eskiHarf, yeniHarf);
-		metinEkle(FileSabitler.file, metin);
+		
+		boolean  kontrol = false;
+		System.out.println("Ekleyerek mi yazsın e/h");
+		String cevap = scaneer.nextLine();
+		if(cevap.equals("e")) {
+			kontrol = true;	
+		}
+		
+		metinEkle(FileSabitler.file, metin,kontrol);
 	}
 	
 	private void dosyaSil(File file) throws Exception {
@@ -135,12 +142,12 @@ public class FileIslemler {
 		String metin = scanner.nextLine();
 		return metin;
 	}
-	//14:40
+	//14:42
 	
-	public static void metinEkle(File file, String string) {
+	public static void metinEkle(File file, String string, boolean kontrol) {
 		BufferedWriter writer = null;
 		try {
-			writer = new BufferedWriter(new FileWriter(file,true));
+			writer = new BufferedWriter(new FileWriter(file,kontrol));
 			writer.write(string + "\n");
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -186,4 +193,8 @@ public class FileIslemler {
 	//dosya oku methodunu string dönecek şekilde override edelim
 	//değiştirmek istediği harf --> s
 	//hangi harfle değiştirmek istiyosunuz --> l
+	
+	//dosyanın üzerine mi yazmak istersiniz
+	//yoksa hepsini silip tekrar mı yazsın
+	
 }

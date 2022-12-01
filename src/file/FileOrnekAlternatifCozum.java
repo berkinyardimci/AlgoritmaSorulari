@@ -40,11 +40,7 @@ public class FileOrnekAlternatifCozum {
 				// O = 2
 				/*
 				for (int i = 0; i < array.length; i++) {
-					
 					toplamKarakterSayisi += array[i].length();
-					if(tekrarEdenKelimeler.containsKey(array[i])) {
-						tekrarEdenKelimeler.put(satir, null)
-					}
 				}
 				*/
 			}

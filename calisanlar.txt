@@ -1,0 +1,7 @@
+ahmet 6000
+mehmet 7000
+ali 3000
+aslı 5000
+zeynep 1000
+hakan 5600
+sila 1600
