@@ -9,9 +9,12 @@ public class Main {
 		
 		NormalPerson normalPerson = new NormalPerson("ali", "bahar", 45, "4455");
 		
+		Admin admin = new Admin("ahmet");
+		
 		showInfo(person);
 		showInfo(vipPerson);
 		showInfo(normalPerson);
+		
 	}
 	
 	public static void showInfo(Person person) {

@@ -13,26 +13,25 @@ public class Taksi implements Runnable {
 
 	public Taksi(int id) {
 		Random random = new Random();
-		this.musteriBirakmaSuresi = random.nextLong(1000, 2000);
+		this.musteriBirakmaSuresi = random.nextLong(1000, 5000);
 		this.id = id;
 	}
-
 	@Override
 	public void run() {
 		// kuyruk boşalana kadar müşteri alcaz
 		// musteriNo bulcaz durak tan her çıkardığımız müşterinin nosu
 		// musterIdleri.add(musteriNo)
 
-		while (!Durak.kuyruk.isEmpty()) {
-			int musteriNo = Durak.kuyruk.poll();
+		while (!Durak.musteriKuyruk.isEmpty()) {
+			int musteriNo = Durak.musteriKuyruk.poll();
 			musterIdleri.add(musteriNo);
+			//1
 			System.out.println(id + ".Taksi --> " + musterIdleri.size() + ".müsterisini aldı-->" + musteriNo);
 			try {
 				Thread.sleep(musteriBirakmaSuresi);
 			} catch (Exception e) {
 
 			}
-			
 		}
 		musteriSayisi = musterIdleri.size();
 		System.out.println(id + ". Taksi " +"Toplam " +musteriSayisi + " Müşteri aldı");

@@ -1,0 +1,25 @@
+Mutlu Ölüm,Albert Camus,Kurgu Dışı
+İnce Memed 1,Yaşar Kemal,Roman
+İnce Memed 2,Yaşar Kemal,Roman
+İnce Memed 3,Yaşar Kemal,Roman
+İnce Memed 4,Yaşar Kemal,Roman
+Zen ve Motorsiklet Bakım Sanatı,Robert M Pirsig,Roman
+Sisifos Söyleni,Albert Camus,Kurgu Dışı
+Yabancı,Albert Camus,Roman
+Aylak Adam,Yusuf Atılgan,Roman
+Son Peygamber,Tahsin Yücel,Roman
+Milen Kundera,Ölümsüzlük,Roman
+Ben,Oruc Aruoba,Kurgu Dışı
+Yorgun Savaşçı,Kemal Tahir,Roman
+Esir Şehrin İnsanları,Kemal Tahir,Roman
+Sevme Sanatı,Erich From,Kurgu Dışı
+Özgürlükten Kaçış,Erich From,Kurgu Dışı
+Yaşıyoruz Sessizce,Şükrü Erbaş,Şiir
+İnsanın Acısını İnsan Alır,Şükrü Erbaş,Kurgu Dışı
+Niteliksiz Adam,Robert Musil,Roman
+Yerçekimi Karanfil,Edip Cansever,Şiir
+Ben Ruhi Bey Nasılım,Edip Cansever,Şiir
+Batı Felsefe Tarihi1,Bertnard Russell,Kurgu Dışı
+Batı Felsefe Tarihi2,Bertnard Russell,Kurgu Dışı
+Batı Felsefe Tarihi3,Bertnard Russell,Kurgu Dışı
+Kayıp Cennet,John Milton,Kurgu Dışı

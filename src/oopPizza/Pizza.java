@@ -22,7 +22,7 @@ public class Pizza {
 	//sınıf ismiyle aynı olurlar
 	
 	//Overloading
-	
+	 
 	public Pizza(boolean vejeteryan) {
 		System.out.println("constructor çalıştı");
 		this.vegi = vejeteryan;
@@ -33,6 +33,7 @@ public class Pizza {
 			this.fiyat = normalFiyat;
 		}
 	}
+	
 	public int getFiyat() {
 		return fiyat;
 	}

@@ -54,7 +54,7 @@ public class YuzMetreKosu {
 	
 	//16:00
 	
-	/*
+	
 	public static void yaris() {
 		ExecutorService ex = Executors.newFixedThreadPool(5);
 		for (int i = 0; i < 10; i++) {
@@ -62,5 +62,5 @@ public class YuzMetreKosu {
 		}
 		ex.shutdown();
 	}
-	*/
+	
 }
