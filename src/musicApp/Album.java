@@ -1,7 +1,9 @@
 package musicApp;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 public class Album {
 
@@ -9,7 +11,7 @@ public class Album {
 	private String sarkici;
 	private ArrayList<Sarki> sarkilar;
 
-	public Album(String name, String sarkici, ArrayList<Sarki> sarkilar) {
+	public Album(String name, String sarkici) {
 		super();
 		this.name = name;
 		this.sarkici = sarkici;
@@ -54,11 +56,29 @@ public class Album {
 		boolean kontrol = kontrolTitle(title);
 		if (!kontrol) {
 			sarkilar.add(new Sarki(title, dakika));
+			//System.out.println(title + " Eklenmiştir");
 			return true;
 		} else {
 			System.out.println("Zaten playlistte şarkı mevcut");
 			return false;
 		}
+	}
+	
+	public void playListeSarkıEkle(String title, HashSet<Sarki> playList) {
+		boolean kontrol = kontrolTitle(title);
+		if(!kontrol) {
+			System.out.println("Albümde böyle bir şarkı yok");
+			return;
+		}
+		List<Sarki> sarkilar2 = this.sarkilar
+				.stream()
+				.filter(s-> s.getTitle().equalsIgnoreCase(title)).toList(); 
+		if(playList.add(sarkilar2.get(0))) {
+			System.out.println(title + " playListe eklenmiştir");
+		}
+		else 
+			System.out.println( title + " Şarkı zaten mevcut");
+		
 	}
 }
 //playliste şarkı ekle methodu ayzalım
