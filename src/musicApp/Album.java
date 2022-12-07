@@ -3,6 +3,7 @@ package musicApp;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Album {
@@ -64,7 +65,7 @@ public class Album {
 		}
 	}
 	
-	public void playListeSarkıEkle(String title, HashSet<Sarki> playList) {
+	public void playListeSarkıEkle(String title, LinkedList<Sarki> playList) {
 		boolean kontrol = kontrolTitle(title);
 		if(!kontrol) {
 			System.out.println("Albümde böyle bir şarkı yok");
