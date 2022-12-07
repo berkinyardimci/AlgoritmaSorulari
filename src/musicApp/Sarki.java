@@ -30,6 +30,13 @@ public class Sarki {
 	public String toString() {
 		return "Sarki [title=" + title + ", dakika=" + dakika + "]";
 	}
+
+	public Sarki(String title) {
+		super();
+		this.title = title;
+	}
+	
+	
 	
 	
 
